@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f3b81672.css",
-    "main.js": "/portfolio/static/js/main.d28ca7d5.js",
+    "main.css": "/portfolio/static/css/main.ea696564.css",
+    "main.js": "/portfolio/static/js/main.e93bb11b.js",
+    "static/media/avatar.svg": "/portfolio/static/media/avatar.62372e86eec1cc197717895ce5605d91.svg",
+    "static/media/laravel-icon.svg": "/portfolio/static/media/laravel-icon.e2f0a40617148a6a875f4daf58108d54.svg",
+    "static/media/php-icon.svg": "/portfolio/static/media/php-icon.d3c99386d2e65098da2e9a1576436ef1.svg",
+    "static/media/bootstrap-icon.svg": "/portfolio/static/media/bootstrap-icon.7e9c39a4b427a4d5df3aef6dbf3524c3.svg",
+    "static/media/react-icon.svg": "/portfolio/static/media/react-icon.76e2275041bf32657448561ae4ed1dff.svg",
+    "static/media/tailwind-icon.svg": "/portfolio/static/media/tailwind-icon.db193e8a564ccf499c36abbd2c965d52.svg",
+    "static/media/css-icon.svg": "/portfolio/static/media/css-icon.aec31ad6887c3a820a1b3b8e2b9d9937.svg",
     "index.html": "/portfolio/index.html",
-    "main.f3b81672.css.map": "/portfolio/static/css/main.f3b81672.css.map",
-    "main.d28ca7d5.js.map": "/portfolio/static/js/main.d28ca7d5.js.map"
+    "static/media/js-icon.svg": "/portfolio/static/media/js-icon.8e003be228681dc81bbf6fc9803c9c2b.svg",
+    "static/media/html-icon.svg": "/portfolio/static/media/html-icon.42c02db687dba9b4821fbac5c65e5296.svg",
+    "main.ea696564.css.map": "/portfolio/static/css/main.ea696564.css.map",
+    "main.e93bb11b.js.map": "/portfolio/static/js/main.e93bb11b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3b81672.css",
-    "static/js/main.d28ca7d5.js"
+    "static/css/main.ea696564.css",
+    "static/js/main.e93bb11b.js"
   ]
 }
