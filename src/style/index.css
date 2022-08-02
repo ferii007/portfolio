@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+
+    .text-title {
+        @apply text-primaryLight dark:text-primaryDark font-semibold text-3xl lg:text-4xl
+    }
+
+    .text-sub-title {
+        @apply text-xl font-medium text-colorDark dark:text-colorLight
+    }
+
+}
