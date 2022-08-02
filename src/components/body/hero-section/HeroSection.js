@@ -44,7 +44,7 @@ const HeroSection = () => {
                     <div className="flex py-2 text-sub-title border-t-2 border-b-2 border-colorDark dark:border-colorLight transition-all duration-300">
                         <h2 className="w-full text-left hover:text-primaryLight dark:hover:text-primaryDark transition-all duration-300">Junior Web Dev</h2>
 
-                        <h2 className="w-full text-right hover:text-primaryLight dark:hover:text-primaryDark transition-all duration-300">Front End Web Dev</h2>
+                        <h2 className="w-full text-right hover:text-primaryLight dark:hover:text-primaryDark transition-all duration-300">Junior Web Dev</h2>
                     </div>
                 
 

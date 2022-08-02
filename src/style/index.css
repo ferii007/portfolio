@@ -13,4 +13,8 @@
         @apply text-xl font-medium text-colorDark dark:text-colorLight
     }
 
+    .about-card {
+        @apply w-[35rem] h-[35rem] pl-8 pt-8 bg-slate-200 dark:bg-colorDark2 bg-opacity-75 flex-shrink-0
+    }
+
 }
