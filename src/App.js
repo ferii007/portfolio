@@ -1,6 +1,6 @@
 
 import React from 'react';
-import AboutSection from './components/body/about-section/AboutSection';
+import AboutSectionMobile from './components/body/about-section/AboutSectionMobile';
 import HeroSection from './components/body/hero-section/HeroSection';
 import MobileMenu from './components/menus/MobileMenu';
 import SwitchModeButton from './components/SwitchModeButton';
@@ -46,7 +46,7 @@ function App() {
       </section>
 
       <section>
-        <AboutSection />
+        <AboutSectionMobile />
       </section>
 
       <section>
