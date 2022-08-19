@@ -35,7 +35,7 @@ const HeroSection = () => {
                     <h1 className="text-title" id="hello">Hello World</h1>
 
                     <h2 className="text-sub-title mt-2 transition-all duration-300">
-                        I'm <span className="text-secondaryLight dark:text-secondayDark">Feri Ramdani</span>
+                        I'm <span className="text-secondaryLight dark:text-secondaryDark">Feri Ramdani</span>
                     </h2>
                 </div>
 

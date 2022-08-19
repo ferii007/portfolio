@@ -1,106 +1,15 @@
 
-import { useEffect } from "react";
+import { myBiodata, listSkills, myPrimarySkills, myOtherSkills } from '../../../data/About';
 import myAvatar from './../../../assets/img/avatar.svg';
-import htmlIcon from './../../../assets/img/icon/html-icon.svg';
-import cssIcon from './../../../assets/img/icon/css-icon.svg';
-import jsIcon from './../../../assets/img/icon/js-icon.svg';
-import phpIcon from './../../../assets/img/icon/php-icon.svg';
-import reactIcon from './../../../assets/img/icon/react-icon.svg';
-import bootstrapIcon from './../../../assets/img/icon/bootstrap-icon.svg';
-import tailwindIcon from './../../../assets/img/icon/tailwind-icon.svg';
-import laravelIcon from './../../../assets/img/icon/laravel-icon.svg';
+import { useState } from 'react';
 
 const AboutSection = () => {
 
-    const myBiodata = [
-        {
-            key: 'Place of Birth',
-            value: 'Bandung'
-        },
+    const[toggleState, setToogleState] = useState(1);
 
-        {
-            key: 'Date of Birth',
-            value: 'Feb 02 2003'
-        },
-
-        {
-            key: 'Gender',
-            value: 'Male'
-        },
-
-        {
-            key: 'Nationally',
-            value: 'Indonesia'
-        },
-
-        {
-            key: 'Religion',
-            value: 'Islam'
-        },
-
-        {
-            key: 'Address',
-            value: 'Bandung, Kopo Street'
-        },
-    ];
-
-    const mySkills = [
-        {
-            name: "HTML",
-            icon: htmlIcon,
-            level: "Expert",
-            bgColor: '#ef652a'
-        },
-
-        {
-            name: "CSS",
-            icon: cssIcon,
-            level: "Expert",
-            bgColor: '#1572b6'
-        },
-
-        {
-            name: "JS",
-            icon: jsIcon,
-            level: "Intermediate",
-            bgColor: '#f7df1e'
-        },
-
-        {
-            name: "PHP",
-            icon: phpIcon,
-            level: "Intermediate",
-            bgColor: '#6181B6'
-        },
-
-        {
-            name: "React",
-            icon: reactIcon,
-            level: "Beginner",
-            bgColor: '#333'
-        },
-
-        {
-            name: "Bootstrap",
-            icon: bootstrapIcon,
-            level: "Expert",
-            bgColor: '#563D7C'
-        },
-
-        {
-            name: "TailwindCSS",
-            icon: tailwindIcon,
-            level: "Expert",
-            bgColor: '#f7f0f0'
-        },
-
-        {
-            name: "Laravel",
-            icon: laravelIcon,
-            level: "Beginner",
-            bgColor: '#f7f0f0'
-        },
-    ];
+    const toggleTab = (index) => {
+        setToogleState(index)
+    }
 
     return(
         <div className="container">
@@ -145,20 +54,54 @@ const AboutSection = () => {
                         </div> 
 
                         <div className="about-card">
-                            <h1 className="text-title mb-7">Skills</h1>
+                            <h1 className="text-title">Skills</h1>
 
-                            <div className="grid grid-cols-4 gap-10 justify-between items-center">
-                                {
-                                    mySkills.map((mySkill, i) => (
-                                        <div key={i} className="relative w-full mt-16 group">
-                                            <div className="absolute w-full h-full flex flex-col items-center justify-center cursor-default opacity-0 bg-black group-hover:opacity-100 group-hover:bg-opacity-50 group-hover:rounded-xl transition-all duration-300">
-                                                <h1 className="text-rose-500">{mySkill.name}</h1>
-                                                <h1 className="">{mySkill.level}</h1>
+                            <div className='text-title text-2xl flex gap-10 my-4'>
+                                    {
+                                        listSkills.map((listSkill, i) => (
+                                            <div key={i} className={`cursor-pointer hover:text-secondaryLight dark:hover:text-secondaryDark transition-all duration-300 ${toggleState === listSkill.tab ? 'active-tab-skill' : 'block'}`} onClick={() => toggleTab(listSkill.tab)}>
+                                                {listSkill.name}
                                             </div>
-                                            <img className={`w-96 group-hover:bg-[${mySkill.bgColor}] group-hover:rounded-xl group-hover:p-4 transition-all duration-300`}  src={mySkill.icon} alt="" />
-                                        </div>
-                                    ))
-                                }
+                                        ))
+                                    }
+                            </div>
+
+                            <div>
+                                <div className={`${toggleState === 1 ? 'block' : 'hidden'}`}>
+                                    <div className='grid grid-cols-4 gap-10'>
+                                        {
+                                            myPrimarySkills.map((myPrimarySkill, i) => (
+                                                <div key={i}>
+                                                    <div className='relative group'>
+                                                        <img className={`w-32 group-hover:bg-[${myPrimarySkill.bgColor}] group-hover:p-4 group-hover:rounded-xl transition-all duration-300`} src={myPrimarySkill.icon} alt={myPrimarySkill.name} />
+
+                                                        <div className={`absolute bg-black opacity-0 w-full h-full top-0 text-title text-2xl flex flex-wrap justify-center items-center group-hover:opacity-100 group-hover:bg-opacity-50 group-hover:rounded-xl transition-all duration-300`}>
+                                                            <h1 className="text-slate-100">{myPrimarySkill.name}</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+
+                                <div className={`${toggleState === 2 ? 'block' : 'hidden'}`}>
+                                    <div className='grid grid-cols-4 gap-10'>
+                                        {
+                                            myOtherSkills.map((myOtherSkill, i) => (
+                                                <div key={i}>
+                                                    <div className='relative group'>
+                                                        <img className={`w-32 group-hover:bg-[${myOtherSkill.bgColor}] group-hover:p-4 group-hover:rounded-xl transition-all duration-300`} src={myOtherSkill.icon} alt={myOtherSkill.name} />
+
+                                                        <div className={`absolute bg-black opacity-0 w-full h-full top-0 text-title text-2xl flex flex-wrap justify-center items-center group-hover:opacity-100 group-hover:bg-opacity-50 group-hover:rounded-xl transition-all duration-300`}>
+                                                            <h1 className="text-slate-100">{myOtherSkill.name}</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

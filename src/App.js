@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       
-      <section className='p-8 pt-32 md:p-14 md:pt-40 md:mb-[21rem] md:min-w-full md:h-9 lg:p-32' id='home'>
+      <section className='p-8 pt-20 md:p-14 md:pt-40 md:mb-[21rem] md:min-w-full md:h-9 lg:p-32' id='home'>
         <HeroSection />
       </section>
 

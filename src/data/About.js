@@ -13,11 +13,13 @@ import gitIcon from './../assets/img/icon/git-icon.svg';
 
 export const listSkills = [
     {
-        "name": "Primary Skills"
+        "name": "Primary Skills",
+        "tab": 1
     },
 
     {
-        "name": "Other Skills"
+        "name": "Other Skills",
+        "tab": 2
     }
 ]
 
@@ -84,7 +86,7 @@ export const myOtherSkills = [
         name: "Cypress",
         icon: cypressIcon,
         level: "Intermediate",
-        bgColor: '#ef652a'
+        bgColor: '#5C5C5E'
     },
 
     {
@@ -98,7 +100,7 @@ export const myOtherSkills = [
         name: "Git",
         icon: gitIcon,
         level: "Intermediate",
-        bgColor: '#ef652a'
+        bgColor: '#f7f0f0'
     },
 ]
 
