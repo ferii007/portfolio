@@ -5,20 +5,36 @@
 
 @layer components {
 
+    .transition-01 {
+        @apply transition-all duration-500
+    }
+
+    .transition-02 {
+        @apply transition-all duration-300
+    }
+
     .text-title {
-        @apply text-primaryLight dark:text-primaryDark font-semibold text-3xl lg:text-4xl
+        @apply text-primaryLight dark:text-primaryDark font-semibold text-3xl lg:text-4xl transition-02
     }
 
     .text-sub-title {
-        @apply text-xl font-medium text-colorDark dark:text-colorLight
+        @apply text-xl font-medium text-colorDark dark:text-colorLight transition-02
+    }
+
+    .button-01 {
+        @apply w-48 bg-primaryLight dark:bg-primaryDark text-colorLight dark:text-colorDark hover:bg-primaryDark dark:hover:bg-primaryLight hover:text-colorDark dark:hover:text-colorLight p-4 mt-8 rounded-xl text-xl font-medium text-center shadow-md shadow-primaryLight dark:shadow-primaryDark hover:shadow-primaryDark dark:hover:shadow-primaryLight transition-02
     }
 
     .about-card {
-        @apply w-[35rem] h-[35rem] pl-8 pt-8 bg-slate-200 dark:bg-colorDark2 bg-opacity-75 flex-shrink-0
+        @apply w-[35rem] h-[38rem] pl-8 pt-8 bg-bgLight2 dark:bg-bgDark2 dark:bg-opacity-75 flex-shrink-0 transition-01
+    }
+
+    .skills-card {
+        @apply bg-bgLight dark:bg-bgDark shadow-bgLight dark:shadow-bgDark shadow-2xl transition-02
     }
 
     .active-tab-skill {
-        @apply text-primaryDark dark:text-secondaryDark
+        @apply text-secondaryLight dark:text-secondaryDark 
     }
 
 }

@@ -34,21 +34,21 @@ const HeroSection = () => {
                 <div className="w-full md:col-span-4 md:row-start-1 md:col-start-1 md:translate-y-16">
                     <h1 className="text-title" id="hello">Hello World</h1>
 
-                    <h2 className="text-sub-title mt-2 transition-all duration-300">
-                        I'm <span className="text-secondaryLight dark:text-secondaryDark">Feri Ramdani</span>
+                    <h2 className="text-sub-title mt-2">
+                        I'm <span className="text-secondaryLight dark:text-secondaryDark transition-01">Feri Ramdani</span>
                     </h2>
                 </div>
 
                 <div className="order-last p-0 w-full md:-w-80 lg:w-96 cursor-default md:row-start-1 md:col-start-1 md:translate-y-40">
-                    <div className="flex py-2 text-sub-title border-t-2 border-b-2 border-colorDark dark:border-colorLight transition-all duration-300">
-                        <h2 className="w-full text-left hover:text-primaryLight dark:hover:text-primaryDark transition-all duration-300">Junior Web Dev</h2>
+                    <div className="flex py-2 text-sub-title border-t-2 border-b-2 border-colorDark dark:border-colorLight transition-01">
+                        <h2 className="w-full text-left hover:text-primaryLight dark:hover:text-primaryDark transition-02">Junior Web Dev</h2>
 
-                        <h2 className="w-full text-right hover:text-primaryLight dark:hover:text-primaryDark transition-all duration-300">Junior Web Dev</h2>
+                        <h2 className="w-full text-right hover:text-primaryLight dark:hover:text-primaryDark transition-02">Junior Web Dev</h2>
                     </div>
                 
 
                     <div className="flex justify-center md:justify-start">
-                        <a href="#about" className="w-48 bg-primaryLight dark:bg-primaryDark text-colorLight dark:text-colorDark hover:bg-primaryDark dark:hover:bg-primaryLight hover:text-colorDark dark:hover:text-colorLight p-4 mt-8 rounded-xl text-xl font-medium text-center transition-all duration-200" id="lets-begin">
+                        <a href="#about" className="button-01" id="lets-begin">
                             Let's Begin
                         </a>
                     </div>

@@ -135,3 +135,8 @@ export const myBiodata = [
         value: 'Bandung, Kopo Street'
     },
 ];
+
+export const textSay =`
+My name is Feri Ramdani.
+Ussually called Pei or Feri. 
+I'm a Junior Web Developer and Front End is one I really like.`

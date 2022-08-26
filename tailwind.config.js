@@ -10,12 +10,17 @@ module.exports = {
       colors: {
         primaryLight: '#F15412',
         primaryDark: '#FF0063',
-        secondaryLight: '#205375',
+        secondaryLight: '#377D71',
         secondaryDark: '#00AFC1',
-        colorLight: 'rgb(241 245 249)',
-        colorLight2: 'rgb(248 250 252)',
-        colorDark: 'rgb(30 41 59)',
-        colorDark2: 'rgb(51 65 85)'
+
+        colorLight: '#F1F5F9',
+        colorDark: '#1E293B',
+
+        bgLight: '#C6DCE4',
+        bgDark: '#1E293B',
+
+        bgLight2: '#DAEAF1',
+        bgDark2: '#334155',
       },
 
       spacing: {
