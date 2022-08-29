@@ -10,6 +10,7 @@ import laravelIcon from './../assets/img/icon/laravel-icon.svg';
 import cypressIcon from './../assets/img/icon/cypress-icon.svg';
 import postmanIcon from './../assets/img/icon/postman-icon.svg';
 import gitIcon from './../assets/img/icon/git-icon.svg';
+import myAvatar from './../assets/img/avatar.svg';
 
 export const listSkills = [
     {
@@ -135,6 +136,8 @@ export const myBiodata = [
         value: 'Bandung, Kopo Street'
     },
 ];
+
+export const avatar = myAvatar
 
 export const textSay =`
 My name is Feri Ramdani.

@@ -46,11 +46,11 @@ function App() {
         <HeroSection />
       </section>
 
-      <section>
+      <section className=''>
         <AboutSection />
       </section>
 
-      <section className='p-8 pt-20'>
+      <section className='p-8 pt-20 hidden'>
         <ContactSection />
       </section>
 

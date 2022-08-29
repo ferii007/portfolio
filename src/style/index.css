@@ -26,11 +26,11 @@
     }
 
     .about-card {
-        @apply w-[35rem] h-[38rem] pl-8 pt-8 bg-bgLight2 dark:bg-bgDark2 dark:bg-opacity-75 flex-shrink-0 transition-01
+        @apply w-[35rem] h-[38rem] md:h-[33rem] md:w-[40rem] pl-8 pt-8 bg-bgLight2 dark:bg-bgDark2 dark:bg-opacity-75 flex-shrink-0 transition-01
     }
 
     .skills-card {
-        @apply bg-bgLight dark:bg-bgDark shadow-bgLight dark:shadow-bgDark shadow-2xl transition-02
+        @apply bg-bgLight dark:bg-bgDark rounded-md shadow-bgLight dark:shadow-bgDark shadow-2xl transition-02
     }
 
     .active-tab-skill {
