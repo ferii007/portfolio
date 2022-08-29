@@ -5,6 +5,7 @@ import AboutSection from './components/body/about-section/AboutSection';
 import MobileMenu from './components/menus/MobileMenu';
 import SwitchModeButton from './components/SwitchModeButton';
 import './style/App.css';
+import ContactSection from './components/body/contact-section/ContactSection';
 
 function App() {
   React.useEffect(() => {
@@ -47,6 +48,10 @@ function App() {
 
       <section>
         <AboutSection />
+      </section>
+
+      <section className='p-8 pt-20'>
+        <ContactSection />
       </section>
 
       <section>

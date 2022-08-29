@@ -37,4 +37,12 @@
         @apply text-secondaryLight dark:text-secondaryDark 
     }
 
+    .form-group {
+        @apply text-sub-title flex flex-col gap-3 py-6 
+    }
+
+    .form-input {
+        @apply bg-bgLight2 dark:bg-bgDark2 p-2 px-4 focus:outline-none focus:border-b-4 focus:border-b-primaryLight dark:focus:border-b-primaryDark rounded-lg transition-02
+    }
+
 }
