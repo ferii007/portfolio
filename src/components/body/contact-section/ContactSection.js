@@ -11,17 +11,17 @@ const ContactSection = () => {
                 <div>
                     <form action="">
                         <div className="form-group">
-                            <label for="">Name</label>
+                            <label htmlFor="">Name</label>
                             <input type="text" className="form-input" placeholder="Input Your Name" />
                         </div>
 
                         <div className="form-group">
-                            <label for="">Email</label>
+                            <label htmlFor="">Email</label>
                             <input type="email" className="form-input" placeholder="Your Valid Email" />
                         </div>
 
                         <div className="form-group">
-                            <label for="">Your Message</label>
+                            <label htmlFor="">Your Message</label>
                             <textarea className="form-input h-48" placeholder="Write Something...." />
                         </div>
 

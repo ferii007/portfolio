@@ -1,16 +1,17 @@
+
 import React from "react";
-import HeroSectionAnimate from "./HeroSectionAnimate"
+import {HeroSectionAnimate, emoticons} from "./HeroSectionAnimate"
 
 const HeroSection = () => {
 
+    const[emoticonState, setEmoticonState] = React.useState();
+
+    const emoticonIndex = (index) => {
+        setEmoticonState(index);
+    }
+
+    
     React.useEffect(() => {
-
-        // const letsBeginBtn = document.querySelector('#lets-begin');
-        // const aboutSection = document.querySelector('#about');
-
-        // letsBeginBtn.addEventListener('click', function() {
-        //     aboutSection.classList.remove('hidden')
-        // });
 
         let hello = document.querySelector('#hello');
         const today = new Date();
@@ -32,30 +33,53 @@ const HeroSection = () => {
         <div className="container">
             <div className="flex flex-wrap md:grid md:grid-cols-3 md:grid-rows-1 md:gap-6 md:-translate-y-5">
                 <div className="w-full md:col-span-4 md:row-start-1 md:col-start-1 md:translate-y-16">
-                    <h1 className="text-title" id="hello">Hello World</h1>
+                    <h1 className="text-title font-fredoka-one" id="hello">Hello World</h1>
 
-                    <h2 className="text-sub-title mt-2">
-                        I'm <span className="text-secondaryLight dark:text-secondaryDark transition-01">Feri Ramdani</span>
+                    <h2 className="text-secondary-title font-righteous mt-2">
+                        How Do You Feel Today?
                     </h2>
                 </div>
 
                 <div className="order-last p-0 w-full md:-w-80 lg:w-96 cursor-default md:row-start-1 md:col-start-1 md:translate-y-40">
-                    <div className="flex py-2 text-sub-title border-t-2 border-b-2 border-colorDark dark:border-colorLight transition-01">
-                        <h2 className="w-full text-left hover:text-primaryLight dark:hover:text-primaryDark transition-02">Junior Web Dev</h2>
-
-                        <h2 className="w-full text-right hover:text-primaryLight dark:hover:text-primaryDark transition-02">Junior Web Dev</h2>
+                    <div className="flex gap-6 md:gap-3 justify-center py-2 text-secondary-title border-t-2 border-colorDark dark:border-colorLight transition-01">
+                        {
+                            emoticons.map((emoticon, i) => (
+                                <li key={i} className="emoticon-canvas list-none">
+                                    <div className="cursor-pointer emoticon-animation" id={emoticon.emoticonCanvasID} onClick={() => emoticonIndex(emoticon.id)}  />
+                                                
+                                    <span className="opacity-0 emoticon-title" id={emoticon.emoticonTitleID}>{emoticon.emoticonTitle}</span>
+                                </li>
+                                    
+                            ))
+                        }
                     </div>
                 
 
                     <div className="flex justify-center md:justify-start">
-                        <a href="#about" className="button-01" id="lets-begin">
-                            Let's Begin
-                        </a>
+                        <div>
+                            <q className={`text-sub-title ${emoticonState === 0 ? 'block' : 'hidden'}`} id="emoticon-paragraf">
+                                {emoticons[0].emoticonQuote}
+                            </q>
+
+                            <q className={`text-sub-title ${emoticonState === 1 ? 'block' : 'hidden'}`} id="emoticon-paragraf">
+                                {emoticons[1].emoticonQuote}
+                            </q>
+
+                            <q className={`text-sub-title ${emoticonState === 2 ? 'block' : 'hidden'}`} id="emoticon-paragraf">
+                                {emoticons[2].emoticonQuote}
+                            </q>
+
+                            <q className={`text-sub-title ${emoticonState === 3 ? 'block' : 'hidden'}`} id="emoticon-paragraf">
+                                {emoticons[3].emoticonQuote}
+                            </q>
+                        </div>
                     </div>
                 </div>
 
-                <HeroSectionAnimate />
+                <div className='w-full md:h-80 lg:h-96 lg:-translate-y-5 md:row-start-1 md:col-start-4' id='hero-avatar-canvas' />
             </div>
+
+            <HeroSectionAnimate />
         </div>
     )
 
