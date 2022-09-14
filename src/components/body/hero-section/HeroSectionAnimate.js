@@ -268,6 +268,7 @@ export const EmoticonSectionAnimate = () => {
                     emoticonData.map((emoticon, i) => (
                         <q key={i} className={`text-sub-title ${emoticonState === emoticon.id ? 'block' : 'hidden'}`}>
                             {emoticon.emoticonQuote}
+                            {/*  */}
                         </q>
                     ))
                 }
