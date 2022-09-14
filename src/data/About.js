@@ -11,6 +11,9 @@ import cypressIcon from './../assets/img/icon/cypress-icon.svg';
 import postmanIcon from './../assets/img/icon/postman-icon.svg';
 import gitIcon from './../assets/img/icon/git-icon.svg';
 import myAvatar from './../assets/img/avatar.svg';
+import githubIcon from './../assets/img/icon/github.svg'
+import linkedinIcon from './../assets/img/icon/linkedin.svg'
+import whatsappIcon from './../assets/img/icon/whatsapp.svg'
 
 export const listSkills = [
     {
@@ -139,7 +142,22 @@ export const myBiodata = [
 
 export const avatar = myAvatar
 
-export const textSay =`
-My name is Feri Ramdani.
-Ussually called Pei or Feri. 
-I'm a Junior Web Developer and Front End is one I really like.`
+export const resumeLinks = [
+    {
+        name: 'Link to My Github',
+        link: 'https://github.com',
+        icon: githubIcon 
+    },
+
+    {
+        name: 'Link to My Linkedin',
+        link: 'https://www.linkedin.com/',
+        icon: linkedinIcon 
+    },
+
+    {
+        name: 'Link to My Whatsapp',
+        link: 'https://whatsapp.com',
+        icon: whatsappIcon 
+    },
+]

@@ -46,8 +46,8 @@ function App() {
         <HeroSection />
       </section>
 
-      <section className=''>
-        {/* <AboutSection /> */}
+      <section className='pt-20'>
+        <AboutSection />
       </section>
 
       <section className='p-8 pt-20 hidden'>

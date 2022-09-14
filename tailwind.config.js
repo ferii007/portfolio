@@ -9,20 +9,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryLight: '#E04D01',
+        primaryLight: '#D54C4C',
         primaryDark: '#FF0063',
-        secondaryLight: '#2E4C6D',
+        secondaryLight: '#233E8B',
         secondaryDark: '#00AFC1',
 
-        colorLight: '#C74B50',
-        colorDark: '#1E293B',
-        colorTextLight: '#0F3460',
+        colorTextLight: '#21094E',
         colorTextDark: '#FEFBF6',
 
-        bgLight: '#9ED2C6',
+        bgLight: '#CEE5D0',
         bgDark: '#1E293B',
 
-        bgLight2: '#DAEAF1',
+        bgLight2: '#D8EBE4',
         bgDark2: '#334155',
       },
 

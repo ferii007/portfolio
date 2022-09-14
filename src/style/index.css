@@ -18,7 +18,7 @@
     }
 
     .text-title {
-        @apply text-3xl lg:text-4xl text-primaryLight dark:text-primaryDark font-semibold transition-02
+        @apply text-3xl lg:text-4xl font-fredoka-one tracking-wider text-primaryLight dark:text-primaryDark font-semibold transition-02
     }
 
     .text-secondary-title {
@@ -26,27 +26,27 @@
     }
 
     .text-sub-title {
-        @apply text-xl md:text-sm lg:text-xl font-medium text-colorDark dark:text-colorLight transition-02
+        @apply text-lg md:text-sm lg:text-lg font-medium font-poppins text-colorTextLight dark:text-colorTextDark transition-02
     }
 
     .text-paragraph {
-        @apply text-xl md:text-sm lg:text-xl font-medium text-colorTextLight dark:text-colorTextDark transition-02
+        @apply text-xl md:text-sm lg:text-xl font-medium font-mono text-colorTextLight dark:text-colorTextDark transition-02
     }
 
     .button-01 {
-        @apply w-48 bg-primaryLight dark:bg-primaryDark text-colorLight dark:text-colorDark hover:bg-primaryDark dark:hover:bg-primaryLight hover:text-colorDark dark:hover:text-colorLight p-4 mt-8 rounded-xl text-xl font-medium text-center shadow-md shadow-primaryLight dark:shadow-primaryDark hover:shadow-primaryDark dark:hover:shadow-primaryLight transition-02
+        @apply mt-8 text-xl font-medium text-center bg-secondaryLight dark:bg-secondaryDark text-colorTextDark dark:text-colorTextLight shadow-2xl shadow-secondaryLight dark:shadow-secondaryDark hover:bg-secondaryDark dark:hover:bg-secondaryLight hover:text-colorTextLight hover:dark:text-colorTextDark hover:shadow-secondaryDark dark:hover:shadow-secondaryLight transition-02
     }
 
     .about-card {
-        @apply w-[35rem] h-[38rem] md:h-[33rem] md:w-[40rem] pl-8 pt-8 bg-bgLight2 dark:bg-bgDark2 dark:bg-opacity-75 flex-shrink-0 transition-01
+        @apply w-[35rem] h-[38rem] pl-8 pt-8 flex-shrink-0 transition-01
     }
 
     .skills-card {
-        @apply bg-bgLight dark:bg-bgDark rounded-md shadow-bgLight dark:shadow-bgDark shadow-2xl transition-02
+        @apply bg-bgLight2 dark:bg-bgDark2 rounded-md transition-02
     }
 
     .active-tab-skill {
-        @apply text-secondaryLight dark:text-secondaryDark 
+        @apply text-primaryLight dark:text-primaryDark 
     }
 
     .form-group {

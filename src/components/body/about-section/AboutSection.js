@@ -1,6 +1,7 @@
 
-import { myBiodata, listSkills, myPrimarySkills, myOtherSkills, textSay, avatar } from '../../../data/About';
-import { useState } from 'react';
+import { myBiodata, listSkills, myPrimarySkills, myOtherSkills, avatar, resumeLinks } from '../../../data/About'
+
+import { useState } from 'react'
 
 const AboutSection = () => {
 
@@ -11,29 +12,29 @@ const AboutSection = () => {
     }
 
     return(
-        <div className="container">
+        <article>
             <div className="text-center mt-14 mb-8">
                 <h1 className="text-title">About Me</h1>
-                <h2 className="mt-2 text-sub-title">Let's be Friends</h2>
+                {/* <h2 className="mt-2 text-secondary-title">Let's be Friends</h2> */}
             </div>
 
-            <div className="pt-10 p-0"  id="horizontal-section">
-                <div className="sticky top-24 w-full overflow-hidden">
-                    <div className="relative flex items-center content-center justify-items-center" id="element-wrapper">
-                        <div className="relative about-card">
-                            <h1 className="text-sub-title pl-6 w-[60%]">Hello World</h1>
+            <div className="pt-10 p-0" id="horizontal-section">
+                <div className="sticky top-24 lg:top-0 w-full overflow-hidden">
+                    <div className="relative flex" id="element-wrapper">
+                        <div className='about-card relative'>
+                            <div className='pl-6 w-[60%] lg:w-[80%]'>
+                                <h1 className='text-secondary-title text-2xl'>Hello World,</h1>
 
-                            <p className="text-sub-title pl-6 w-[60%]">
-                                {textSay}
-                            </p>
+                                <p className='text-paragraph'>My name is Feri Ramdani. Ussually called Pei or Feri. I'm a Junior Web Developer and Front End is one I really like.</p>
+                            </div>
 
-                            <div className="absolute bottom-0 right-0 w-72 translate-x-10">
+                            <div className='absolute bottom-0 right-0 w-72 lg:w-80 translate-x-10 lg:translate-x-64'>
                                 <img src={avatar} alt="It's Me" />
                             </div>
                         </div>
 
-                        <div className="about-card">
-                            <h1 className="text-title mb-7 ml-20">My Biodata</h1>
+                        <div className='about-card lg:pl-96 lg:w-[62rem]'>
+                            <h1 className="text-secondary-title text-2xl translate-x-14">My Biodata</h1>
 
                             <div className="text-sub-title">
                                 <ul>
@@ -48,57 +49,85 @@ const AboutSection = () => {
                                     }
                                 </ul>
                             </div>
-                        </div> 
+                        </div>
 
-                        <div className="about-card w-[70rem]">
-                            <h1 className="text-title">Skills</h1>
+                        <div className='about-card w-[70rem] lg:w-[80rem]'>
+                            <h1 className='text-secondary-title text-2xl'>Skills</h1>
 
-                            <div className='text-title text-2xl flex gap-10 my-4'>
-                                    {
-                                        listSkills.map((listSkill, i) => (
-                                            <div key={i} className={`cursor-pointer hover:text-secondaryLight dark:hover:text-secondaryDark ${toggleState === listSkill.tab ? 'active-tab-skill' : 'block'} transition-02`} onClick={() => toggleTab(listSkill.tab)}>
-                                                {listSkill.name}
-                                            </div>
-                                        ))
-                                    }
+                            <div className='text-secondary-title text-xl flex gap-10 my-4'>
+                                {
+                                    listSkills.map((listSkill, i) => (
+                                        <div key={i} className={`cursor-pointer hover:text-primaryLight dark:hover:text-primaryDark ${toggleState === listSkill.tab ? 'active-tab-skill' : 'block'} transition-02`} onClick={() => toggleTab(listSkill.tab)}>
+                                            {listSkill.name}
+                                        </div>
+                                    ))
+                                }
                             </div>
 
-                            <div>
-                                <div className={`${toggleState === 1 ? 'block' : 'hidden'}`}>
-                                    <div className='grid grid-cols-3 gap-10 md:grid-cols-4'>
-                                    {
-                                        myPrimarySkills.map((myPrimarySkill, i) => (
-                                            <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-default'>
-                                                <div>
-                                                    <img src={myPrimarySkill.icon} alt="My Primary Skill" className='w-20 h-full' />
-                                                </div>
-
-                                                <div className='font-semibold text-colorDark dark:text-colorLight'>
-                                                    <h1 className="text-2xl">{myPrimarySkill.name}</h1>
-
-                                                    <h3 className="text-md">{myPrimarySkill.level}</h3>
-                                                </div>
+                            <div className={`${toggleState === 1 ? 'block' : 'hidden'}`}>
+                                <div className='grid grid-cols-3 gap-10 md:grid-cols-4'>
+                                {
+                                    myPrimarySkills.map((myPrimarySkill, i) => (
+                                        <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-default'>
+                                            <div>
+                                                <img src={myPrimarySkill.icon} alt="My Primary Skill" className='w-20 h-full' />
                                             </div>
+
+                                            <div>
+                                                <h1 className="text-title text-2xl">{myPrimarySkill.name}</h1>
+
+                                                <h3 className="text-sub-title text-md">{myPrimarySkill.level}</h3>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                                </div>
+                            </div>
+
+                            <div className={`${toggleState === 2 ? 'block' : 'hidden'}`}>
+                                <div className='grid grid-cols-3 gap-10 md:grid-cols-4'>
+                                    {
+                                        myOtherSkills.map((myOtherSkill, i) => (
+                                            <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-default'>
+                                            <div>
+                                                <img src={myOtherSkill.icon} alt="My Primary Skill" className='w-20 h-full' />
+                                            </div>
+
+                                            <div>
+                                                <h1 className="text-title text-2xl">{myOtherSkill.name}</h1>
+
+                                                <h3 className="text-sub-title text-md">{myOtherSkill.level}</h3>
+                                            </div>
+                                        </div>
                                         ))
                                     }
-                                    </div>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div className={`${toggleState === 2 ? 'block' : 'hidden'}`}>
-                                    <div className='grid grid-cols-4 gap-10'>
+                        <div className='about-card'>
+                            <div className='grid place-items-center lg:place-items-end'>
+                                <div className='translate-y-20 bg-bgLight2 dark:bg-bgDark2 h-96 w-72 rounded-md'>
+                                    <div className='flex justify-center items-center leading-none'>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1585554414787-09b821c321c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                                        alt="pic"
+                                        class="h-40 w-60 rounded-md shadow-xl mt-6 -translate-y-10"
+                                    />
+                                    </div>
+
+                                    <div className='flex flex-col justify-center'>
+                                        <a href="#about" className="button-01">
+                                            Download CV
+                                        </a>
+                                    </div>
+
+                                    <div className='flex gap-7 justify-center mt-10'>
                                         {
-                                            myOtherSkills.map((myOtherSkill, i) => (
-                                                <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-default'>
-                                                <div>
-                                                    <img src={myOtherSkill.icon} alt="My Primary Skill" className='w-20 h-full' />
-                                                </div>
-
-                                                <div>
-                                                    <h1 className="text-2xl font-semibold text-colorLight">{myOtherSkill.name}</h1>
-
-                                                    <h3 className="text-md font-semibold text-colorLight">{myOtherSkill.level}</h3>
-                                                </div>
-                                            </div>
+                                            resumeLinks.map((resumeLink, i) => (
+                                                <a key={i} href={resumeLink.link} target='__blank'>
+                                                    <img className='w-12' src={resumeLink.icon} alt={resumeLink.name} />
+                                                </a>
                                             ))
                                         }
                                     </div>
@@ -106,27 +135,11 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className="about-card">
-                            <div className="flex gap-12 translate-x-32 translate-y-56">
-                                <div>
-                                    <a href="#about" className="button-01">
-                                        Download CV
-                                    </a>
-                                </div>
-
-                                <div>
-                                <a href="#about" className="button-01">
-                                    Contact Me
-                                </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="about-card w-[40rem] md:w-[10rem]"></div>
+                        <div className="about-card w-[100rem]"></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 
 }
