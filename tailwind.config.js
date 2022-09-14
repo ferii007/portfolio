@@ -9,15 +9,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryLight: '#F15412',
+        primaryLight: '#E04D01',
         primaryDark: '#FF0063',
-        secondaryLight: '#377D71',
+        secondaryLight: '#2E4C6D',
         secondaryDark: '#00AFC1',
 
-        colorLight: '#F1F5F9',
+        colorLight: '#C74B50',
         colorDark: '#1E293B',
+        colorTextLight: '#0F3460',
+        colorTextDark: '#FEFBF6',
 
-        bgLight: '#C6DCE4',
+        bgLight: '#9ED2C6',
         bgDark: '#1E293B',
 
         bgLight2: '#DAEAF1',
@@ -35,7 +37,8 @@ module.exports = {
 
       fontFamily: {
         'righteous' : ['Righteous', 'Poppins', 'Arial', 'sans-serif', 'system-ui'],
-        'fredoka-one': ['Fredoka One', 'Poppins', 'Arial', 'sans-serif', 'system-ui']
+        'fredoka-one': ['Fredoka One', 'Poppins', 'Arial', 'sans-serif', 'system-ui'],
+        'poppins': ['Poppins', 'Arial', 'sans-serif', 'system-ui']
       },
     },
   },

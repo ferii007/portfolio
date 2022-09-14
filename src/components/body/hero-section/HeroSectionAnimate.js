@@ -249,13 +249,13 @@ export const EmoticonSectionAnimate = () => {
 
     return(
         <div className="w-full md:w-80 lg:w-96 md:col-start-1 md:row-start-1 order-last p-0 md:translate-y-40">
-            <div className="text-secondary-title grid grid-cols-6 md:grid-cols-4 grid-rows-2 md:grid-rows-3 lg:flex lg:flex-nowrap gap-0 py-2 border-t-2 border-colorDark dark:border-colorLight transition-01">
+            <div className="grid grid-cols-6 md:grid-cols-4 grid-rows-2 md:grid-rows-3 lg:flex lg:flex-nowrap gap-0 py-2 border-t-2 border-colorTextLight dark:border-colorTextDark transition-01">
                 {
                     emoticonData.map((emoticon) => (
                         <div key={emoticon.id} className={`text-primaryLight dark:text-primaryDark grid justify-items-center col-span-2 ${emoticon.id === 0 ? 'md:row-start-1 md:col-start-1 md:col-end-2' : emoticon.id === 1 ? 'md:row-start-2 md:col-start-2 md:col-end-3' : emoticon.id === 3 ? 'md:row-start-3 col-start-2 col-end-4 md:col-start-1 md:col-end-2' : emoticon.id === 4 ? 'md:row-start-3 col-start-4 col-end-6 md:col-start-3 md:col-end-4' : 'block'} group`}>
                             <div className="w-20 md:w-14 lg:w-20 cursor-pointer" id={emoticon.emoticonCanvasID} />
 
-                            <span className={`${emoticonState === emoticon.id ? 'opacity-100' : 'opacity-0'} cursor-default group-hover:opacity-100 transition-02`} id={emoticon.emoticonLabelID}>
+                            <span className={`text-secondary-title ${emoticonState === emoticon.id ? 'opacity-100' : 'opacity-0'} cursor-default group-hover:opacity-100 transition-02`} id={emoticon.emoticonLabelID}>
                                 {emoticon.label}
                             </span>
                         </div>
@@ -266,7 +266,7 @@ export const EmoticonSectionAnimate = () => {
             <div className="flex justify-center md:justify-start">
                 {
                     emoticonData.map((emoticon, i) => (
-                        <q key={i} className={`text-sub-title ${emoticonState === emoticon.id ? 'block' : 'hidden'}`}>
+                        <q key={i} className={`text-paragraph font-mono ${emoticonState === emoticon.id ? 'block' : 'hidden'}`}>
                             {emoticon.emoticonQuote}
                             {/*  */}
                         </q>

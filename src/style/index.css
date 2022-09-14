@@ -29,6 +29,10 @@
         @apply text-xl md:text-sm lg:text-xl font-medium text-colorDark dark:text-colorLight transition-02
     }
 
+    .text-paragraph {
+        @apply text-xl md:text-sm lg:text-xl font-medium text-colorTextLight dark:text-colorTextDark transition-02
+    }
+
     .button-01 {
         @apply w-48 bg-primaryLight dark:bg-primaryDark text-colorLight dark:text-colorDark hover:bg-primaryDark dark:hover:bg-primaryLight hover:text-colorDark dark:hover:text-colorLight p-4 mt-8 rounded-xl text-xl font-medium text-center shadow-md shadow-primaryLight dark:shadow-primaryDark hover:shadow-primaryDark dark:hover:shadow-primaryLight transition-02
     }

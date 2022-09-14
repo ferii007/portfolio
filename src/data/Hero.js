@@ -57,7 +57,7 @@ export const emoticonData = [
     {
         id: 4,
         name: 'Anxious Emoticon',
-        label: 'anxious',
+        label: 'Anxious',
         emoticonCanvasID: 'anxious-emoticon-canvas' ,
         emoticonLabelID: 'anxious-emoticon-label',
         emoticonQuote: 'Ini Quote ketika user klik emoticon anxious',

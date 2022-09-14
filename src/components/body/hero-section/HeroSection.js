@@ -27,7 +27,7 @@ const HeroSection = () => {
         <article>
             <div className="flex flex-wrap md:grid md:grid-cols-3 md:grid-rows-1">
                 <div className="w-full md:col-span-4 md:col-start-1 md:row-start-1 md:translate-y-16">
-                    <h1 className="text-title font-fredoka-one" id="hello">.</h1>
+                    <h1 className="text-title font-fredoka-one tracking-wide" id="hello">.</h1>
 
                     <h2 className="text-secondary-title font-righteous mt-2">
                         How Do You Feel Today?
