@@ -46,6 +46,7 @@ const MobileMenu = () => {
                 {
                     mobileMenus.map((mobileMenu, i) =>(
                         <li key={i} className="w-16">
+                            {i}
                             <a href={mobileMenu.href} className="flex flex-col text-center pt-6" onClick={() => setActive(i)}>
                                 <span className={`text-3xl cursor-pointer duration-500 ${i === active && '-mt-6 text-white text-4xl'}`}>
                                     <ion-icon name={mobileMenu.icon}></ion-icon>

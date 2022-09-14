@@ -18,23 +18,15 @@
     }
 
     .text-title {
-        @apply text-primaryLight dark:text-primaryDark font-semibold text-3xl lg:text-4xl transition-02
+        @apply text-3xl lg:text-4xl text-primaryLight dark:text-primaryDark font-semibold transition-02
     }
 
     .text-secondary-title {
-        @apply text-xl font-medium font-righteous text-secondaryLight dark:text-secondaryDark transition-02
+        @apply text-xl md:text-sm lg:text-xl font-medium font-righteous text-secondaryLight dark:text-secondaryDark transition-02
     }
 
     .text-sub-title {
-        @apply text-xl font-medium text-colorDark dark:text-colorLight transition-02
-    }
-
-    .emoticon-canvas {
-        @apply w-16 md:w-20 text-primaryLight dark:text-primaryDark text-center
-    }
-
-    .emoticon-title {
-        @apply z-10 md:left-2 transition-02 ease-in-out
+        @apply text-xl md:text-sm lg:text-xl font-medium text-colorDark dark:text-colorLight transition-02
     }
 
     .button-01 {

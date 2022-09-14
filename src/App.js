@@ -35,7 +35,7 @@ function App() {
             if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
                 elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
             }
-        }
+        } 
     }
   }, []);
 
