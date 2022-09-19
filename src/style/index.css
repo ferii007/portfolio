@@ -38,7 +38,7 @@
     }
 
     .about-card {
-        @apply w-[35rem] h-[38rem] pl-8 pt-8 flex-shrink-0 transition-01
+        @apply w-[35rem] h-[38rem] lg:h-[30rem] pl-8 pt-8 flex-shrink-0 transition-01
     }
 
     .skills-card {
@@ -55,6 +55,14 @@
 
     .form-input {
         @apply bg-bgLight2 dark:bg-bgDark2 p-2 px-4 focus:outline-none focus:border-b-4 focus:border-b-primaryLight dark:focus:border-b-primaryDark rounded-lg transition-02
+    }
+    
+    .bg-gradient-dark {
+        background: linear-gradient(to top, #0F172A, transparent);
+    }
+
+    .bg-gradient-light {
+        background: linear-gradient(to top, #5A541C, transparent);
     }
 
 }

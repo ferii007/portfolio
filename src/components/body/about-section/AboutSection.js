@@ -18,7 +18,7 @@ const AboutSection = () => {
                 {/* <h2 className="mt-2 text-secondary-title">Let's be Friends</h2> */}
             </div>
 
-            <div className="pt-10 p-0" id="horizontal-section">
+            <div className="pt-10 p-0" id="horizontal-section" >
                 <div className="sticky top-24 lg:top-0 w-full overflow-hidden">
                     <div className="relative flex" id="element-wrapper">
                         <div className='about-card relative'>
@@ -112,7 +112,7 @@ const AboutSection = () => {
                                     <img
                                         src="https://images.unsplash.com/photo-1585554414787-09b821c321c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
                                         alt="pic"
-                                        class="h-40 w-60 rounded-md shadow-xl mt-6 -translate-y-10"
+                                        className="h-40 w-60 rounded-md shadow-xl mt-6 -translate-y-10"
                                     />
                                     </div>
 

@@ -6,6 +6,7 @@ import MobileMenu from './components/menus/MobileMenu';
 import SwitchModeButton from './components/SwitchModeButton';
 import './style/App.css';
 import ContactSection from './components/body/contact-section/ContactSection';
+import Footer from './components/body/footer/Footer';
 
 function App() {
   React.useEffect(() => {
@@ -19,24 +20,25 @@ function App() {
         //   header.classList.remove('header-fixed')
         // }
         
-
-        const windowWidth = window.innerWidth;
-        const elementWrapper = document.querySelector('#element-wrapper')
-        const horLength = elementWrapper.scrollWidth;
-        const horizontalSection = document.querySelector('#horizontal-section');
-        const distFromTop = horizontalSection.offsetTop;
-        const scrollDistance = distFromTop + horLength - windowWidth;
-
-        horizontalSection.style.height = horLength + "px";
-
-        window.onscroll = function() {
-            const scrollTop = window.pageYOffset;
-
-            if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
-                elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
-            }
-        } 
     }
+
+    // const windowWidth = window.innerWidth;
+    // const elementWrapper = document.querySelector('#element-wrapper')
+    // const horLength = elementWrapper.scrollWidth;
+    // const horizontalSection = document.querySelector('#horizontal-section');
+    // const distFromTop = horizontalSection.offsetTop;
+    // const scrollDistance = distFromTop + horLength - windowWidth;
+
+    // horizontalSection.style.height = horLength + "px";
+    // // horizontalSection.classList.add(`h-[${horLength}px]`);
+
+    // window.onscroll = function() {
+    //   const scrollTop = window.pageYOffset;
+
+    //   if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+    //       elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
+    //   }
+    // } 
   }, []);
 
   return (
@@ -47,12 +49,28 @@ function App() {
       </section>
 
       <section className='pt-20'>
-        <AboutSection />
+        {/* <AboutSection /> */}
       </section>
 
       <section className='p-8 pt-20 hidden'>
-        <ContactSection />
+        {/* <ContactSection /> */}
       </section>
+
+
+      {/* <div className='mb-[500px]'></div> */}
+
+
+      <footer className=''>
+        <Footer />
+      </footer>
+
+      
+
+
+      {/* <div className='mb-[5000px]'></div> */}
+
+
+
 
       <section>
         <SwitchModeButton /> {/* Light and Dark Mode Button Componnent */}
