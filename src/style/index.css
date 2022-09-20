@@ -18,31 +18,31 @@
     }
 
     .text-title {
-        @apply text-3xl lg:text-4xl font-fredoka-one tracking-wider text-primaryLight dark:text-primaryDark font-semibold transition-02
+        @apply text-3xl lg:text-4xl font-fredoka-one tracking-wider text-primaryLight dark:text-primaryDark font-semibold
     }
 
     .text-secondary-title {
-        @apply text-xl md:text-sm lg:text-xl font-medium font-righteous text-secondaryLight dark:text-secondaryDark transition-02
+        @apply text-xl md:text-sm lg:text-xl font-medium font-righteous text-secondaryLight dark:text-secondaryDark
     }
 
     .text-sub-title {
-        @apply text-lg md:text-sm lg:text-lg font-medium font-poppins text-colorTextLight dark:text-colorTextDark transition-02
+        @apply text-lg md:text-sm lg:text-lg font-medium font-poppins text-colorTextLight dark:text-colorTextDark
     }
 
     .text-paragraph {
-        @apply text-xl md:text-sm lg:text-xl font-medium font-mono text-colorTextLight dark:text-colorTextDark transition-02
+        @apply text-xl md:text-sm lg:text-xl font-medium font-mono text-colorTextLight dark:text-colorTextDark
     }
 
     .button-01 {
-        @apply mt-8 text-xl font-medium text-center bg-secondaryLight dark:bg-secondaryDark text-colorTextDark dark:text-colorTextLight shadow-2xl shadow-secondaryLight dark:shadow-secondaryDark hover:bg-secondaryDark dark:hover:bg-secondaryLight hover:text-colorTextLight hover:dark:text-colorTextDark hover:shadow-secondaryDark dark:hover:shadow-secondaryLight transition-02
+        @apply mt-8 text-xl font-medium text-center bg-secondaryLight dark:bg-secondaryDark text-colorTextDark dark:text-colorTextLight shadow-2xl shadow-secondaryLight dark:shadow-secondaryDark hover:bg-secondaryDark dark:hover:bg-secondaryLight hover:text-colorTextLight hover:dark:text-colorTextDark hover:shadow-secondaryDark dark:hover:shadow-secondaryLight
     }
 
     .about-card {
-        @apply w-[35rem] h-[38rem] lg:h-[30rem] pl-8 pt-8 flex-shrink-0 transition-01
+        @apply w-[35rem] h-[38rem] lg:h-[30rem] pl-8 pt-8 flex-shrink-0
     }
 
     .skills-card {
-        @apply bg-bgLight2 dark:bg-bgDark2 rounded-md transition-02
+        @apply bg-bgLight2 dark:bg-bgDark2 rounded-md
     }
 
     .active-tab-skill {
@@ -54,7 +54,7 @@
     }
 
     .form-input {
-        @apply bg-bgLight2 dark:bg-bgDark2 p-2 px-4 focus:outline-none focus:border-b-4 focus:border-b-primaryLight dark:focus:border-b-primaryDark rounded-lg transition-02
+        @apply bg-bgLight2 dark:bg-bgDark2 p-2 px-4 focus:outline-none focus:border-b-4 focus:border-b-primaryLight dark:focus:border-b-primaryDark rounded-lg
     }
     
     .bg-gradient-dark {
@@ -63,6 +63,34 @@
 
     .bg-gradient-light {
         background: linear-gradient(to top, #5A541C, transparent);
+    }
+
+    .bg-light-gradient {
+        background: #4CA1AF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .bg-dark-gradient {
+        background: #141E30;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .bg-light-gradient2 {
+        background: #50C9C3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .bg-dark-gradient2 {
+        background: #606c88;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .max-width-01 {
+        @apply max-w-7xl m-auto
     }
 
 }

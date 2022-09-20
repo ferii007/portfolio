@@ -7,9 +7,12 @@ import SwitchModeButton from './components/SwitchModeButton';
 import './style/App.css';
 import ContactSection from './components/body/contact-section/ContactSection';
 import Footer from './components/body/footer/Footer';
+import Project from './components/body/project/Project';
 
 function App() {
+
   React.useEffect(() => {
+
     window.onscroll = function() {
         // const header = document.querySelector('header');
         // const fixedHeader = header.offsetTop;
@@ -22,23 +25,23 @@ function App() {
         
     }
 
-    // const windowWidth = window.innerWidth;
-    // const elementWrapper = document.querySelector('#element-wrapper')
-    // const horLength = elementWrapper.scrollWidth;
-    // const horizontalSection = document.querySelector('#horizontal-section');
-    // const distFromTop = horizontalSection.offsetTop;
-    // const scrollDistance = distFromTop + horLength - windowWidth;
+    const horizontalSection = document.querySelector('#horizontal-section');
+    const elementWrapper = document.querySelector('#element-wrapper');
+    const horLength = elementWrapper.scrollWidth;
+    const windowWidth = window.innerWidth;
+    const distFromTop = horizontalSection.offsetTop;
+    const scrollDistance = distFromTop + horLength - windowWidth * 0.1;
 
-    // horizontalSection.style.height = horLength + "px";
-    // // horizontalSection.classList.add(`h-[${horLength}px]`);
+    horizontalSection.style.height = horLength + "px";
 
-    // window.onscroll = function() {
-    //   const scrollTop = window.pageYOffset;
+    document.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset;
 
-    //   if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
-    //       elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
-    //   }
-    // } 
+      if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+        elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
+      }
+    });
+ 
   }, []);
 
   return (
@@ -48,8 +51,12 @@ function App() {
         <HeroSection />
       </section>
 
-      <section className='pt-20'>
-        {/* <AboutSection /> */}
+      <section className='pt-20' id='about'>
+        <AboutSection />
+      </section>
+
+      <section className='pt-10' id='project'>
+        <Project />
       </section>
 
       <section className='p-8 pt-20 hidden'>
@@ -60,7 +67,7 @@ function App() {
       {/* <div className='mb-[500px]'></div> */}
 
 
-      <footer className=''>
+      <footer className='pt-96'>
         <Footer />
       </footer>
 
@@ -82,6 +89,7 @@ function App() {
 
     </div>
   );
+  
 }
 
 export default App;

@@ -1,39 +1,8 @@
-
 import { useEffect, useState } from "react"
 import lottie from "lottie-web"
-import {heroAvatarAnimation, emoticonData, happyEmotion, indifferentEmotion, sadEmotion, angryEmotion, anxiousEmotion} from "./../../../data/Hero";
+import {emoticonData, happyEmotion, indifferentEmotion, sadEmotion, angryEmotion, anxiousEmotion} from "./../../../data/Hero";
 
-export const HeroAvatarAnimate = () => {
-
-    useEffect (() => {
-        const heroAvatarCanvas = document.querySelector('#hero-avatar-canvas');
-            const heroAvatar = lottie.loadAnimation({
-                container: heroAvatarCanvas,
-                animationData: heroAvatarAnimation,
-                renderer: 'svg',
-                loop: true,
-                autoplay: false,
-                name: "Hero Avatar",
-            }); 
-
-            heroAvatar.goToAndStop(90, true);
-            heroAvatar.playSegments([20, 48], false);
-
-            heroAvatarCanvas.addEventListener('click', function() {
-                heroAvatar.playSegments([48, 90], false);
-                heroAvatar.goToAndStop(90, true);
-                heroAvatar.playSegments([20, 48], false);
-            });
-    }, []);
-
-
-    return(
-        <div className="w-full md:h-80 lg:h-96 md:row-start-1 md:col-start-4" id="hero-avatar-canvas" />
-    )
-
-}
-
-export const EmoticonSectionAnimate = () => {
+const EmoticonSectionAnimate = () => {
 
     const[emoticonState, setEmoticonState] = useState();
 
@@ -255,7 +224,7 @@ export const EmoticonSectionAnimate = () => {
                         <div key={emoticon.id} className={`text-primaryLight dark:text-primaryDark grid justify-items-center col-span-2 ${emoticon.id === 0 ? 'md:row-start-1 md:col-start-1 md:col-end-2' : emoticon.id === 1 ? 'md:row-start-2 md:col-start-2 md:col-end-3' : emoticon.id === 3 ? 'md:row-start-3 col-start-2 col-end-4 md:col-start-1 md:col-end-2' : emoticon.id === 4 ? 'md:row-start-3 col-start-4 col-end-6 md:col-start-3 md:col-end-4' : 'block'} group`}>
                             <div className="w-20 md:w-14 lg:w-20 cursor-pointer" id={emoticon.emoticonCanvasID} />
 
-                            <span className={`text-secondary-title ${emoticonState === emoticon.id ? 'opacity-100' : 'opacity-0'} cursor-default group-hover:opacity-100 transition-02`} id={emoticon.emoticonLabelID}>
+                            <span className={`text-secondary-title ${emoticonState === emoticon.id ? 'opacity-100' : 'opacity-0'} cursor-default group-hover:opacity-100`} id={emoticon.emoticonLabelID}>
                                 {emoticon.label}
                             </span>
                         </div>
@@ -277,3 +246,5 @@ export const EmoticonSectionAnimate = () => {
     )
 
 }
+
+export default EmoticonSectionAnimate

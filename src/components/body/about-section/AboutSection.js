@@ -12,13 +12,13 @@ const AboutSection = () => {
     }
 
     return(
-        <article>
+        <article className='max-width-01'>
             <div className="text-center mt-14 mb-8">
                 <h1 className="text-title">About Me</h1>
                 {/* <h2 className="mt-2 text-secondary-title">Let's be Friends</h2> */}
             </div>
 
-            <div className="pt-10 p-0" id="horizontal-section" >
+            <div className="py-10 p-0" id="horizontal-section" >
                 <div className="sticky top-24 lg:top-0 w-full overflow-hidden">
                     <div className="relative flex" id="element-wrapper">
                         <div className='about-card relative'>
@@ -57,7 +57,7 @@ const AboutSection = () => {
                             <div className='text-secondary-title text-xl flex gap-10 my-4'>
                                 {
                                     listSkills.map((listSkill, i) => (
-                                        <div key={i} className={`cursor-pointer hover:text-primaryLight dark:hover:text-primaryDark ${toggleState === listSkill.tab ? 'active-tab-skill' : 'block'} transition-02`} onClick={() => toggleTab(listSkill.tab)}>
+                                        <div key={i} className={`cursor-pointer hover:text-primaryLight dark:hover:text-primaryDark ${toggleState === listSkill.tab ? 'active-tab-skill' : 'block'}`} onClick={() => toggleTab(listSkill.tab)}>
                                             {listSkill.name}
                                         </div>
                                     ))
@@ -105,7 +105,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className='about-card'>
+                        <div className='about-card w-[25rem]'>
                             <div className='grid place-items-center lg:place-items-end'>
                                 <div className='translate-y-20 bg-bgLight2 dark:bg-bgDark2 h-96 w-72 rounded-md'>
                                     <div className='flex justify-center items-center leading-none'>
@@ -135,7 +135,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className="about-card w-[100rem]"></div>
+                        <div className="about-card w-[15rem] lg:w-[10%]"></div>
                     </div>
                 </div>
             </div>
