@@ -8,8 +8,12 @@ import './style/App.css';
 import ContactSection from './components/body/contact-section/ContactSection';
 import Footer from './components/body/footer/Footer';
 import Project from './components/body/project/Project';
+import axios from 'axios';
+import { useState } from 'react';
 
 function App() {
+
+  const [wikipediaApiHtmlData, setWikipediaApiHtmlData] = useState([])
 
   React.useEffect(() => {
 
@@ -41,6 +45,32 @@ function App() {
         elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
       }
     });
+
+
+    // axios({
+    //   method: 'get',
+    //   url: 'https://jsonplaceholder.typicode.com/users',
+    // })
+    // .then(res => console.log(res.data));
+    
+    // axios({
+    //   method: 'get',
+    //   url: 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Html',
+    //   headers: {
+    //     "Content-Type": "application/x-www-form-urlencoded"
+    //   },
+    // })
+    // .then(res => {
+    //   console.log(res.data)
+    //   setWikipediaApiHtmlData(res.data)
+    // });
+
+    axios.get('/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Html')
+         .then(res => {
+          console.log(res.data)
+          setWikipediaApiHtmlData(res.data)
+         });
+    
  
   }, []);
 
@@ -63,21 +93,9 @@ function App() {
         {/* <ContactSection /> */}
       </section>
 
-
-      {/* <div className='mb-[500px]'></div> */}
-
-
       <footer className='pt-96'>
         <Footer />
       </footer>
-
-      
-
-
-      {/* <div className='mb-[5000px]'></div> */}
-
-
-
 
       <section>
         <SwitchModeButton /> {/* Light and Dark Mode Button Componnent */}
