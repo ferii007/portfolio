@@ -16,7 +16,7 @@ const AboutSection = () => {
     }
 
     async function wikipediaAPI(param) {
-        await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&explaintext&redirects=1&titles=${param}&formatversion=2`)
+        await axios.get(`/w/api.php?action=query&format=json&prop=extracts&explaintext&redirects=1&titles=${param}&formatversion=2`)
              .then(res => {
               const content = res.data.query.pages
               setShowWikipediaDataModal(true)
