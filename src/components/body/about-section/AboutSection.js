@@ -1,14 +1,29 @@
 
 import { myBiodata, listSkills, myPrimarySkills, myOtherSkills, avatar, resumeLinks } from '../../../data/About'
-
-import { useState } from 'react'
+import axios from 'axios';
+import { useState } from 'react';
+import WikipediaDataModal from './WikipediaDataModal';
 
 const AboutSection = () => {
 
     const[toggleState, setToogleState] = useState(1);
+    const [wikipediaApiData, setWikipediaApiData] = useState([]);
+    const [showWikipediaDataModal, setShowWikipediaDataModal] = useState(false)
+    const closeWikipediaDataModal = () => setShowWikipediaDataModal(false)
 
     const toggleTab = (index) => {
         setToogleState(index)
+    }
+
+    async function wikipediaAPI(param) {
+        await axios.get(`/w/api.php?action=query&format=json&prop=extracts&explaintext&redirects=1&titles=${param}&formatversion=2`)
+             .then(res => {
+              const content = res.data.query.pages
+              setShowWikipediaDataModal(true)
+              setWikipediaApiData(content)
+             }).catch(error => {
+                console.log(error)
+             });
     }
 
     return(
@@ -66,21 +81,21 @@ const AboutSection = () => {
 
                             <div className={`${toggleState === 1 ? 'block' : 'hidden'}`}>
                                 <div className='grid grid-cols-3 gap-10 md:grid-cols-4'>
-                                {
-                                    myPrimarySkills.map((myPrimarySkill, i) => (
-                                        <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-default'>
-                                            <div>
-                                                <img src={myPrimarySkill.icon} alt="My Primary Skill" className='w-20 h-full' />
-                                            </div>
+                                    {
+                                        myPrimarySkills.map((myPrimarySkill, i) => (
+                                            <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-pointer' onClick={() => wikipediaAPI(myPrimarySkill.wikipediaTitle)}>
+                                                <div>
+                                                    <img src={myPrimarySkill.icon} alt="My Primary Skill" className='w-20 h-full' />
+                                                </div>
 
-                                            <div>
-                                                <h1 className="text-title text-2xl">{myPrimarySkill.name}</h1>
+                                                <div>
+                                                    <h1 className="text-title text-2xl">{myPrimarySkill.name}</h1>
 
-                                                <h3 className="text-sub-title text-md">{myPrimarySkill.level}</h3>
+                                                    <h3 className="text-sub-title text-md">{myPrimarySkill.level}</h3>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))
-                                }
+                                        ))
+                                    }
                                 </div>
                             </div>
 
@@ -88,17 +103,17 @@ const AboutSection = () => {
                                 <div className='grid grid-cols-3 gap-10 md:grid-cols-4'>
                                     {
                                         myOtherSkills.map((myOtherSkill, i) => (
-                                            <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-default'>
-                                            <div>
-                                                <img src={myOtherSkill.icon} alt="My Primary Skill" className='w-20 h-full' />
-                                            </div>
+                                            <div key={i} className='skills-card flex gap-6 px-5 py-4 items-center cursor-pointer' onClick={() => wikipediaAPI(myOtherSkill.wikipediaTitle)}>
+                                                <div>
+                                                    <img src={myOtherSkill.icon} alt="My Primary Skill" className='w-20 h-full' />
+                                                </div>
 
-                                            <div>
-                                                <h1 className="text-title text-2xl">{myOtherSkill.name}</h1>
+                                                <div>
+                                                    <h1 className="text-title text-2xl">{myOtherSkill.name}</h1>
 
-                                                <h3 className="text-sub-title text-md">{myOtherSkill.level}</h3>
+                                                    <h3 className="text-sub-title text-md">{myOtherSkill.level}</h3>
+                                                </div>
                                             </div>
-                                        </div>
                                         ))
                                     }
                                 </div>
@@ -139,6 +154,8 @@ const AboutSection = () => {
                     </div>
                 </div>
             </div>
+
+            <WikipediaDataModal wikipediaApiData={wikipediaApiData} visible={showWikipediaDataModal} onClose={closeWikipediaDataModal} />
         </article>
     )
 

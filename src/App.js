@@ -8,12 +8,9 @@ import './style/App.css';
 import ContactSection from './components/body/contact-section/ContactSection';
 import Footer from './components/body/footer/Footer';
 import Project from './components/body/project/Project';
-import axios from 'axios';
-import { useState } from 'react';
+
 
 function App() {
-
-  const [wikipediaApiHtmlData, setWikipediaApiHtmlData] = useState([])
 
   React.useEffect(() => {
 
@@ -45,38 +42,12 @@ function App() {
         elementWrapper.style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
       }
     });
-
-
-    // axios({
-    //   method: 'get',
-    //   url: 'https://jsonplaceholder.typicode.com/users',
-    // })
-    // .then(res => console.log(res.data));
-    
-    // axios({
-    //   method: 'get',
-    //   url: 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Html',
-    //   headers: {
-    //     "Content-Type": "application/x-www-form-urlencoded"
-    //   },
-    // })
-    // .then(res => {
-    //   console.log(res.data)
-    //   setWikipediaApiHtmlData(res.data)
-    // });
-
-    axios.get('/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Html')
-         .then(res => {
-          console.log(res.data)
-          setWikipediaApiHtmlData(res.data)
-         });
-    
  
   }, []);
 
   return (
     <div className="App">
-      
+
       <section className='p-8 pt-20 md:p-14 md:pt-40 md:mb-[21rem] md:min-w-full md:h-9 lg:p-32' id='home'>
         <HeroSection />
       </section>

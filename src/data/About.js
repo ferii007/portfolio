@@ -30,6 +30,7 @@ export const listSkills = [
 export const myPrimarySkills = [
     {
         name: "HTML",
+        wikipediaTitle: 'Html',
         icon: htmlIcon,
         level: "Expert",
         bgColor: '#ef652a'
@@ -37,6 +38,7 @@ export const myPrimarySkills = [
 
     {
         name: "CSS",
+        wikipediaTitle: 'Css',
         icon: cssIcon,
         level: "Expert",
         bgColor: '#1572b6'
@@ -44,6 +46,7 @@ export const myPrimarySkills = [
 
     {
         name: "JS",
+        wikipediaTitle: 'Javascript',
         icon: jsIcon,
         level: "Intermediate",
         bgColor: '#f7df1e'
@@ -51,6 +54,7 @@ export const myPrimarySkills = [
 
     {
         name: "PHP",
+        wikipediaTitle: 'Php',
         icon: phpIcon,
         level: "Intermediate",
         bgColor: '#6181B6'
@@ -58,6 +62,7 @@ export const myPrimarySkills = [
 
     {
         name: "React",
+        wikipediaTitle: 'ReactJS',
         icon: reactIcon,
         level: "Beginner",
         bgColor: '#333'
@@ -65,6 +70,7 @@ export const myPrimarySkills = [
 
     {
         name: "Bootstrap",
+        wikipediaTitle: 'Bootstrap (front-end framework)',
         icon: bootstrapIcon,
         level: "Expert",
         bgColor: '#563D7C'
@@ -72,6 +78,7 @@ export const myPrimarySkills = [
 
     {
         name: "Tailwind",
+        wikipediaTitle: 'Tailwind CSS',
         icon: tailwindIcon,
         level: "Expert",
         bgColor: '#f7f0f0'
@@ -79,6 +86,7 @@ export const myPrimarySkills = [
 
     {
         name: "Laravel",
+        wikipediaTitle: 'Laravel',
         icon: laravelIcon,
         level: "Beginner",
         bgColor: '#f7f0f0'
@@ -88,6 +96,7 @@ export const myPrimarySkills = [
 export const myOtherSkills = [
     {
         name: "Cypress",
+        // wikipediaTitle: 'Cypress',
         icon: cypressIcon,
         level: "Intermediate",
         bgColor: '#5C5C5E'
@@ -95,6 +104,7 @@ export const myOtherSkills = [
 
     {
         name: "Postman",
+        wikipediaTitle: 'Postman (software)',
         icon: postmanIcon,
         level: "Intermediate",
         bgColor: '#ef652a'
@@ -102,6 +112,7 @@ export const myOtherSkills = [
 
     {
         name: "Git",
+        wikipediaTitle: 'Git',
         icon: gitIcon,
         level: "Intermediate",
         bgColor: '#f7f0f0'
